@@ -4,6 +4,7 @@ var read               = require('read-file-relative').readSync;
 var pluginTestingUtils = require('testcafe').pluginTestingUtils;
 var pluginFactory      = require('../lib');
 var testCalls          = require('./data/test-calls');
+var OS                 = require('os-family');
 
 function createReport (withColors) {
     var outStream = {
@@ -43,8 +44,9 @@ function createReport (withColors) {
 }
 
 it('Should produce report with colors', function () {
-    var report   = createReport(true);
-    var expected = JSON.parse(read('./data/report-with-colors.json'));
+    var report       = createReport(true);
+    var expectedFile = OS.win ? './data/report-with-colors-win.json' : './data/report-with-colors.json';
+    var expected     = JSON.parse(read(expectedFile));
 
     report   = normalizeNewline(report).trim();
     expected = normalizeNewline(expected).trim();
