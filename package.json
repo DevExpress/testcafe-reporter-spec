@@ -1,7 +1,7 @@
 {
   "name": "testcafe-reporter-spec",
   "version": "1.0.0",
-  "description": "spec TestCafe reporter plugin.",
+  "description": "Spec TestCafe reporter plugin.",
   "repository": "https://github.com/DevExpress/testcafe-reporter-spec",
   "author": {
     "name": "Developer Express Inc. ",
