@@ -30,6 +30,7 @@
     "gulp-mocha": "^2.2.0",
     "normalize-newline": "^1.0.2",
     "os-family": "^1.0.0",
+    "publish-please": "^1.0.1",
     "read-file-relative": "^1.2.0",
     "testcafe": "0.0.7-alpha"
   }
