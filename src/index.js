@@ -22,7 +22,7 @@ export default function () {
         reportFixtureStart (name, path) {
             var title = `${name} (${this.chalk.underline(path)})`;
 
-            this.setIndent(2)
+            this.setIndent(1)
                 .useWordWrap(true);
 
             if (this.afterErrList)
@@ -40,7 +40,7 @@ export default function () {
             var symbol    = hasErr ? this.chalk.red(this.symbols.err) : this.chalk.green(this.symbols.ok);
             var title     = `${symbol} ${nameStyle(name)}`;
 
-            this.setIndent(4)
+            this.setIndent(2)
                 .useWordWrap(true);
 
             if (unstable)
@@ -52,7 +52,7 @@ export default function () {
             this.write(title);
 
             if (hasErr) {
-                this.setIndent(8)
+                this.setIndent(4)
                     .newline();
 
                 errs.forEach((err, idx) => {

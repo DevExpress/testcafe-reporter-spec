@@ -1,61 +1,60 @@
 Running tests in: Chrome, Firefox
 
-  fixture1 (./fixture1.js)
-    ✓ fixture1test1 (unstable) (screenshots: /screenshots/1445437598847)
-    ✖ fixture1test2 (screenshots: /screenshots/1445437598847)
+ fixture1 (./fixture1.js)
+  ✓ fixture1test1 (unstable) (screenshots: /screenshots/1445437598847)
+  ✖ fixture1test2 (screenshots: /screenshots/1445437598847)
 
-        1) Chrome
-           Assertion failed at step "Step":
+    1) Chrome
+       Assertion failed at step "Step":
 
-               eq(["12345678901"], ["00000000000"])
+       eq(["12345678901"], ["00000000000"])
 
-           Arrays differ at index 0:
+       Arrays differ at index 0:
 
-           Expected: [0]: "12345678901"
-           Actual:   [0]: "00000000000"
-                           ^
+       Expected: [0]: "12345678901"
+       Actual:   [0]: "00000000000"
+                       ^
 
-           Screenshot: /screenshots/1445437598847/userAgent/1.Fail.png
-
-
-        2) Chrome
-           Assertion failed at step "Step":
-
-               notEq("test", "test")
-
-           Expected: not "test"
-           Actual:   "test"
+       Screenshot: /screenshots/1445437598847/userAgent/1.Fail.png
 
 
-        3) Firefox
-           Assertion failed at step "Step":
+    2) Chrome
+       Assertion failed at step "Step":
 
-               ok(false)
+       notEq("test", "test")
 
-           Expected: not null, not undefined, not false, not NaN and not
-           ''
-           Actual:   false
+       Expected: not "test"
+       Actual:   "test"
 
 
-    ✓ fixture1test3
+    3) Firefox
+       Assertion failed at step "Step":
 
-  fixture2 (./fixture2.js)
-    ✓ fixture2test1
-    ✓ fixture2test2
+       ok(false)
 
-  fixture3 (./fixture3.js)
-    ✖ fixture3test1 (unstable)
+       Expected: not null, not undefined, not false, not NaN and not ''
+       Actual:   false
 
-        1) Firefox
-           Assertion failed at step "Step":
 
-               eq(["12345678901"], ["00000000000"])
+  ✓ fixture1test3
 
-           Arrays differ at index 0:
+ fixture2 (./fixture2.js)
+  ✓ fixture2test1
+  ✓ fixture2test2
 
-           Expected: [0]: "12345678901"
-           Actual:   [0]: "00000000000"
-                           ^
+ fixture3 (./fixture3.js)
+  ✖ fixture3test1 (unstable)
+
+    1) Firefox
+       Assertion failed at step "Step":
+
+       eq(["12345678901"], ["00000000000"])
+
+       Arrays differ at index 0:
+
+       Expected: [0]: "12345678901"
+       Actual:   [0]: "00000000000"
+                       ^
 
 
 
