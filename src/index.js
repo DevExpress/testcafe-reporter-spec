@@ -77,7 +77,7 @@ export default function () {
 
             footer += this.chalk.gray(` (${durationStr})`);
 
-            this.setIndent(2)
+            this.setIndent(1)
                 .useWordWrap(true);
 
             if (!this.afterErrList)
