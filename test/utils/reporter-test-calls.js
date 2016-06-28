@@ -1,8 +1,12 @@
-var LegacyTestRunErrorFormattableAdapter = require('testcafe/lib/legacy/test-run-error/formattable-adapter');
+var TestRunErrorFormattableAdapter = require('testcafe').embeddingUtils.TestRunErrorFormattableAdapter;
+var UncaughtErrorOnPage            = require('testcafe').embeddingUtils.testRunErrors.UncaughtErrorOnPage;
+var ActionElementNotFoundError     = require('testcafe').embeddingUtils.testRunErrors.ActionElementNotFoundError;
+var testCallsite                   = require('./test-callsite');
 
-function makeErrors (errs) {
-    return errs.map(function (err) {
-        return new LegacyTestRunErrorFormattableAdapter(err);
+
+function makeErrors (errDescrs) {
+    return errDescrs.map(function (descr) {
+        return new TestRunErrorFormattableAdapter(descr.err, descr.metaInfo);
     });
 }
 
@@ -41,36 +45,24 @@ module.exports = [
             'fixture1test2',
             makeErrors([
                 {
-                    stepName: 'Step',
-                    expected: '"12345678901"',
-                    actual:   '"00000000000"',
-                    callsite: 'eq(["12345678901"], ["00000000000"])',
-                    key:      0,
-                    isArrays: true,
-                    type:     'legacy|eqAssertion',
 
-                    diffType: {
-                        isStrings: true,
-                        diffIndex: 0
-                    },
+                    err: new UncaughtErrorOnPage('Some error', 'http://example.org'),
 
-                    screenshotPath: '/screenshots/1445437598847/userAgent/1.Fail.png',
-                    userAgent:      'Chrome'
+                    metaInfo: {
+                        userAgent:      'Chrome',
+                        screenshotPath: '/screenshots/1445437598847/errors',
+                        callsite:       testCallsite,
+                        testRunState:   'inTest'
+                    }
                 },
                 {
-                    callsite:  'notEq("test", "test")',
-                    actual:    '"test"',
-                    expected:  '"test"',
-                    stepName:  'Step',
-                    type:      'legacy|notEqAssertion',
-                    userAgent: 'Chrome'
-                },
-                {
-                    stepName:  'Step',
-                    callsite:  'ok(false)',
-                    actual:    'false',
-                    type:      'legacy|okAssertion',
-                    userAgent: 'Firefox'
+                    err: new ActionElementNotFoundError(),
+
+                    metaInfo: {
+                        userAgent:    'Firefox',
+                        callsite:     testCallsite,
+                        testRunState: 'inTest'
+                    }
                 }
             ]),
             74000,
@@ -128,20 +120,13 @@ module.exports = [
             'fixture3test1',
             makeErrors([
                 {
-                    stepName: 'Step',
-                    expected: '"12345678901"',
-                    actual:   '"00000000000"',
-                    callsite: 'eq(["12345678901"], ["00000000000"])',
-                    key:      0,
-                    isArrays: true,
-                    type:     'legacy|eqAssertion',
+                    err: new ActionElementNotFoundError(),
 
-                    diffType: {
-                        isStrings: true,
-                        diffIndex: 0
-                    },
-
-                    userAgent: 'Firefox'
+                    metaInfo: {
+                        userAgent:    'Firefox',
+                        callsite:     testCallsite,
+                        testRunState: 'inBeforeEach'
+                    }
                 }
             ]),
             74000,

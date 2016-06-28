@@ -56,8 +56,10 @@ export default function () {
                     .newline();
 
                 errs.forEach((err, idx) => {
+                    var prefix = this.chalk.red(`${idx + 1}) `);
+
                     this.newline()
-                        .write(this.formatError(err, `${idx + 1}) `))
+                        .write(this.formatError(err, prefix))
                         .newline()
                         .newline();
                 });
