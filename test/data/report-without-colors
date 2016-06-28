@@ -1,10 +1,12 @@
-Running tests in: Chrome, Firefox
+Running tests in: Chrome 41.0.2227 / Mac OS X 10.10.1, Firefox 47 / Mac OS X
+10.10.1
 
- fixture1 (./fixture1.js)
-  ✓ fixture1test1 (unstable) (screenshots: /screenshots/1445437598847)
-  ✖ fixture1test2 (screenshots: /screenshots/1445437598847)
+ First fixture (./fixture1.js)
+  ✓ First test in first fixture (unstable) (screenshots:
+  /screenshots/1445437598847)
+  ✖ Second test in first fixture (screenshots: /screenshots/1445437598847)
 
-    1) Chrome
+    1) Chrome 41.0.2227 / Mac OS X 10.10.1
        Error on page "http://example.org":
 
        Some error
@@ -26,7 +28,7 @@ Running tests in: Chrome, Firefox
        Screenshot: /screenshots/1445437598847/errors
 
 
-    2) Firefox
+    2) Firefox 47 / Mac OS X 10.10.1
        The specified selector does not match any element in the DOM tree.
 
           1 |var createCallsiteRecord = require('callsite-record');
@@ -44,16 +46,16 @@ Running tests in: Chrome, Firefox
           at Object.<anonymous> (some-file:1:1)
 
 
-  ✓ fixture1test3
+  ✓ Third test in first fixture
 
- fixture2 (./fixture2.js)
-  ✓ fixture2test1
-  ✓ fixture2test2
+ Second fixture (./fixture2.js)
+  ✓ First test in second fixture
+  ✓ Second test in second fixture
 
- fixture3 (./fixture3.js)
-  ✖ fixture3test1 (unstable)
+ Third fixture (./fixture3.js)
+  ✖ First test in third fixture (unstable)
 
-    1) Firefox
+    1) Firefox 47 / Mac OS X 10.10.1
        - Error in beforeEach hook -
        The specified selector does not match any element in the DOM tree.
 

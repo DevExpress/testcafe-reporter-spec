@@ -16,8 +16,8 @@ module.exports = [
         args:   [
             new Date('1970-01-01T00:00:00.000Z'),
             [
-                'Chrome',
-                'Firefox'
+                'Chrome 41.0.2227 / Mac OS X 10.10.1',
+                'Firefox 47 / Mac OS X 10.10.1'
             ],
             6
         ]
@@ -25,14 +25,14 @@ module.exports = [
     {
         method: 'reportFixtureStart',
         args:   [
-            'fixture1',
+            'First fixture',
             './fixture1.js'
         ]
     },
     {
         method: 'reportTestDone',
         args:   [
-            'fixture1test1',
+            'First test in first fixture',
             [],
             74000,
             true,
@@ -42,14 +42,14 @@ module.exports = [
     {
         method: 'reportTestDone',
         args:   [
-            'fixture1test2',
+            'Second test in first fixture',
             makeErrors([
                 {
 
                     err: new UncaughtErrorOnPage('Some error', 'http://example.org'),
 
                     metaInfo: {
-                        userAgent:      'Chrome',
+                        userAgent:      'Chrome 41.0.2227 / Mac OS X 10.10.1',
                         screenshotPath: '/screenshots/1445437598847/errors',
                         callsite:       testCallsite,
                         testRunState:   'inTest'
@@ -59,7 +59,7 @@ module.exports = [
                     err: new ActionElementNotFoundError(),
 
                     metaInfo: {
-                        userAgent:    'Firefox',
+                        userAgent:    'Firefox 47 / Mac OS X 10.10.1',
                         callsite:     testCallsite,
                         testRunState: 'inTest'
                     }
@@ -73,7 +73,7 @@ module.exports = [
     {
         method: 'reportTestDone',
         args:   [
-            'fixture1test3',
+            'Third test in first fixture',
             [],
             74000,
             false,
@@ -83,14 +83,14 @@ module.exports = [
     {
         method: 'reportFixtureStart',
         args:   [
-            'fixture2',
+            'Second fixture',
             './fixture2.js'
         ]
     },
     {
         method: 'reportTestDone',
         args:   [
-            'fixture2test1',
+            'First test in second fixture',
             [],
             74000,
             false,
@@ -100,7 +100,7 @@ module.exports = [
     {
         method: 'reportTestDone',
         args:   [
-            'fixture2test2',
+            'Second test in second fixture',
             [],
             74000,
             false,
@@ -110,20 +110,20 @@ module.exports = [
     {
         method: 'reportFixtureStart',
         args:   [
-            'fixture3',
+            'Third fixture',
             './fixture3.js'
         ]
     },
     {
         method: 'reportTestDone',
         args:   [
-            'fixture3test1',
+            'First test in third fixture',
             makeErrors([
                 {
                     err: new ActionElementNotFoundError(),
 
                     metaInfo: {
-                        userAgent:    'Firefox',
+                        userAgent:    'Firefox 47 / Mac OS X 10.10.1',
                         callsite:     testCallsite,
                         testRunState: 'inBeforeEach'
                     }

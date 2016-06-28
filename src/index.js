@@ -36,8 +36,8 @@ export default function () {
 
         reportTestDone (name, errs, durationMs, unstable, screenshotPath) {
             var hasErr    = !!errs.length;
-            var nameStyle = hasErr ? this.chalk.red : this.chalk.gray;
-            var symbol    = hasErr ? this.chalk.red(this.symbols.err) : this.chalk.green(this.symbols.ok);
+            var nameStyle = hasErr ? this.chalk.red.bold : this.chalk.gray;
+            var symbol    = hasErr ? this.chalk.red.bold(this.symbols.err) : this.chalk.green(this.symbols.ok);
             var title     = `${symbol} ${nameStyle(name)}`;
 
             this.setIndent(2)
