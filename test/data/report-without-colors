@@ -1,7 +1,7 @@
 Running tests in: Chrome 41.0.2227 / Mac OS X 10.10.1, Firefox 47 / Mac OS X
 10.10.1
 
- First fixture (./fixture1.js)
+ First fixture
   ✓ First test in first fixture (unstable) (screenshots:
   /screenshots/1445437598847)
   ✖ Second test in first fixture (screenshots: /screenshots/1445437598847)
@@ -48,11 +48,11 @@ Running tests in: Chrome 41.0.2227 / Mac OS X 10.10.1, Firefox 47 / Mac OS X
 
   ✓ Third test in first fixture
 
- Second fixture (./fixture2.js)
+ Second fixture
   ✓ First test in second fixture
   ✓ Second test in second fixture
 
- Third fixture (./fixture3.js)
+ Third fixture
   ✖ First test in third fixture (unstable)
 
     1) Firefox 47 / Mac OS X 10.10.1

@@ -19,9 +19,7 @@ export default function () {
                 .newline();
         },
 
-        reportFixtureStart (name, path) {
-            var title = `${name} (${this.chalk.underline(path)})`;
-
+        reportFixtureStart (name) {
             this.setIndent(1)
                 .useWordWrap(true);
 
@@ -30,7 +28,7 @@ export default function () {
             else
                 this.newline();
 
-            this.write(title)
+            this.write(name)
                 .newline();
         },
 
