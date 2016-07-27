@@ -1,78 +1,96 @@
-Running tests in: Chrome 41.0.2227 / Mac OS X 10.10.1, Firefox 47 / Mac OS X
-10.10.1
+ Running tests in:
+ - Chrome 41.0.2227 / Mac OS X 10.10.1
+ - Firefox 47 / Mac OS X 10.10.1
 
  First fixture
-  ✓ First test in first fixture (unstable) (screenshots:
-  /screenshots/1445437598847)
-  ✖ Second test in first fixture (screenshots: /screenshots/1445437598847)
+ ✓ First test in first fixture (unstable) (screenshots:
+ /screenshots/1445437598847)
+ ✖ Second test in first fixture (screenshots: /screenshots/1445437598847)
 
-    1) Chrome 41.0.2227 / Mac OS X 10.10.1
-       Error on page "http://example.org":
+   1) Error on page "http://example.org":
 
-       Some error
+      Some error
 
-          1 |var createCallsiteRecord = require('callsite-record');
-          2 |
-          3 |function someFunc () {
-        > 4 |    throw new Error('Hey ya!');
-          5 |}
-          6 |
-          7 |try {
-          8 |    someFunc();
-          9 |}
+      Browser: Chrome 41.0.2227 / Mac OS X 10.10.1
+      Screenshot: /screenshots/1445437598847/errors
 
-          at someFunc (some-file:1:1)
-          at Object.<anonymous> (some-file:1:1)
-          at Object.<anonymous> (some-file:1:1)
+         1 |var createCallsiteRecord = require('callsite-record');
+         2 |
+         3 |function someFunc () {
+       > 4 |    throw new Error('Hey ya!');
+         5 |}
+         6 |
+         7 |try {
+         8 |    someFunc();
+         9 |}
 
-       Screenshot: /screenshots/1445437598847/errors
-
-
-    2) Firefox 47 / Mac OS X 10.10.1
-       The specified selector does not match any element in the DOM tree.
-
-          1 |var createCallsiteRecord = require('callsite-record');
-          2 |
-          3 |function someFunc () {
-        > 4 |    throw new Error('Hey ya!');
-          5 |}
-          6 |
-          7 |try {
-          8 |    someFunc();
-          9 |}
-
-          at someFunc (some-file:1:1)
-          at Object.<anonymous> (some-file:1:1)
-          at Object.<anonymous> (some-file:1:1)
+         at someFunc (some-file:1:1)
+         at Object.<anonymous> (some-file:1:1)
+         at Object.<anonymous> (some-file:1:1)
 
 
-  ✓ Third test in first fixture
+   2) The specified selector does not match any element in the DOM tree.
+
+      Browser: Firefox 47 / Mac OS X 10.10.1
+
+         1 |var createCallsiteRecord = require('callsite-record');
+         2 |
+         3 |function someFunc () {
+       > 4 |    throw new Error('Hey ya!');
+         5 |}
+         6 |
+         7 |try {
+         8 |    someFunc();
+         9 |}
+
+         at someFunc (some-file:1:1)
+         at Object.<anonymous> (some-file:1:1)
+         at Object.<anonymous> (some-file:1:1)
+
+
+ ✓ Third test in first fixture
 
  Second fixture
-  ✓ First test in second fixture
-  ✓ Second test in second fixture
+ ✓ First test in second fixture
+ ✓ Second test in second fixture
 
  Third fixture
-  ✖ First test in third fixture (unstable)
+ ✖ First test in third fixture (unstable)
 
-    1) Firefox 47 / Mac OS X 10.10.1
-       - Error in beforeEach hook -
-       The specified selector does not match any element in the DOM tree.
+   1) - Error in beforeEach hook -
+      The specified selector does not match any element in the DOM tree.
 
-          1 |var createCallsiteRecord = require('callsite-record');
-          2 |
-          3 |function someFunc () {
-        > 4 |    throw new Error('Hey ya!');
-          5 |}
-          6 |
-          7 |try {
-          8 |    someFunc();
-          9 |}
+      Browser: Firefox 47 / Mac OS X 10.10.1
 
-          at someFunc (some-file:1:1)
-          at Object.<anonymous> (some-file:1:1)
-          at Object.<anonymous> (some-file:1:1)
+         1 |var createCallsiteRecord = require('callsite-record');
+         2 |
+         3 |function someFunc () {
+       > 4 |    throw new Error('Hey ya!');
+         5 |}
+         6 |
+         7 |try {
+         8 |    someFunc();
+         9 |}
+
+         at someFunc (some-file:1:1)
+         at Object.<anonymous> (some-file:1:1)
+         at Object.<anonymous> (some-file:1:1)
 
 
 
  2/6 failed (15m 25s)
+
+ Warnings (3):
+ --
+  Was unable to take a screenshot due to an error.
+
+  ReferenceError: someVar is not defined
+ --
+  Was unable to take a screenshot due to an error.
+
+  ReferenceError: someOtherVar is not defined
+ --
+  Was unable to take screenshots because the screenshot directory is not
+  specified. To specify it, use the "-s" or "--screenshots" command line
+  option or the "screenshots" method of the test runner in case you are using
+  API.
