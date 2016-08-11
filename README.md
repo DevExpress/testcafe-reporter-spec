@@ -10,7 +10,7 @@ This is the **Spec** reporter plugin for [TestCafe](http://devexpress.github.io/
 ## Install
 
 ```
-npm install -g testcafe-reporter-spec
+npm install testcafe-reporter-spec
 ```
 
 ## Usage
