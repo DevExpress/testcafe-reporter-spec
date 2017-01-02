@@ -27,6 +27,12 @@
          at someFunc (some-file:1:1)
          at Object.<anonymous> (some-file:1:1)
          at Object.<anonymous> (some-file:1:1)
+         at Object.<anonymous> (some-file:1:1)
+         at Object.<anonymous> (some-file:1:1)
+         at <anonymous> (some-file:1:1)
+         at Mocha.loadFiles (some-file:1:1)
+         at Mocha.run (some-file:1:1)
+         at Object.<anonymous> (some-file:1:1)
 
 
    2) The specified selector does not match any element in the DOM tree.
@@ -46,6 +52,12 @@
          at someFunc (some-file:1:1)
          at Object.<anonymous> (some-file:1:1)
          at Object.<anonymous> (some-file:1:1)
+         at Object.<anonymous> (some-file:1:1)
+         at Object.<anonymous> (some-file:1:1)
+         at <anonymous> (some-file:1:1)
+         at Mocha.loadFiles (some-file:1:1)
+         at Mocha.run (some-file:1:1)
+         at Object.<anonymous> (some-file:1:1)
 
 
  ✓ Third test in first fixture
@@ -53,6 +65,7 @@
  Second fixture
  ✓ First test in second fixture
  ✓ Second test in second fixture
+ - Third test in second fixture
 
  Third fixture
  ✖ First test in third fixture (unstable)
@@ -74,6 +87,12 @@
 
          at someFunc (some-file:1:1)
          at Object.<anonymous> (some-file:1:1)
+         at Object.<anonymous> (some-file:1:1)
+         at Object.<anonymous> (some-file:1:1)
+         at Object.<anonymous> (some-file:1:1)
+         at <anonymous> (some-file:1:1)
+         at Mocha.loadFiles (some-file:1:1)
+         at Mocha.run (some-file:1:1)
          at Object.<anonymous> (some-file:1:1)
 
 
