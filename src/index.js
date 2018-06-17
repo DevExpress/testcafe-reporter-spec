@@ -76,6 +76,12 @@ export default function () {
             this.setIndent(1)
                 .useWordWrap(true);
 
+            if (testRunInfo.durationMs && !testRunInfo.skipped) {
+                const durationStr = this.moment.duration(testRunInfo.durationMs).format('h[h] mm[m] ss[s]');
+
+                title += ' - (' + durationStr + ')';
+            }
+
             if (testRunInfo.unstable)
                 title += this.chalk.yellow(' (unstable)');
 
