@@ -77,7 +77,7 @@ export default function () {
                 .useWordWrap(true);
 
             if (testRunInfo.durationMs && !testRunInfo.skipped) {
-                const durationStr = this.moment.duration(testRunInfo.durationMs).format('h[h] mm[m] ss[s]');
+                var durationStr = this.moment.duration(testRunInfo.durationMs).format('h[h] mm[m] ss[s]');
 
                 title += ' - (' + durationStr + ')';
             }
