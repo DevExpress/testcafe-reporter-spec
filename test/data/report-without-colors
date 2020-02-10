@@ -3,9 +3,10 @@
  - Firefox 47 / Mac OS X 10.10.1
 
  First fixture
- ✓ First test in first fixture (unstable) (screenshots:
+ ✓ First test in first fixture - (1m 14s) (unstable) (screenshots:
  /screenshots/1445437598847)
- ✖ Second test in first fixture (screenshots: /screenshots/1445437598847)
+ ✖ Second test in first fixture - (1m 14s) (screenshots:
+ /screenshots/1445437598847)
 
    1) Error on page "http://example.org":
 
@@ -48,15 +49,15 @@
          at Object.<anonymous> (some-file:1:1)
 
 
- ✓ Third test in first fixture
+ ✓ Third test in first fixture - (1m 14s)
 
  Second fixture
- ✓ First test in second fixture
- ✓ Second test in second fixture
+ ✓ First test in second fixture - (1m 14s)
+ ✓ Second test in second fixture - (1m 14s)
  - Third test in second fixture
 
  Third fixture
- ✖ First test in third fixture (unstable)
+ ✖ First test in third fixture - (1m 14s) (unstable)
 
    1) - Error in beforeEach hook -
       The specified selector does not match any element in the DOM tree.

@@ -1,11 +1,11 @@
 {
-  "name": "testcafe-reporter-spec",
+  "name": "testcafe-reporter-sexy-spec",
   "version": "2.1.1",
-  "description": "Spec TestCafe reporter plugin.",
-  "repository": "https://github.com/DevExpress/testcafe-reporter-spec",
+  "description": "Sexy spec TestCafe reporter plugin.",
+  "repository": "https://github.com/Asgator/testcafe-reporter-spec",
   "author": {
-    "name": "Developer Express Inc. ",
-    "url": "https://devexpress.com"
+    "name": "Asgator",
+    "url": "https://github.com/Asgator/testcafe-reporter-spec"
   },
   "main": "lib/index",
   "files": [
