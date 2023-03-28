@@ -1,7 +1,7 @@
-var TestRunErrorFormattableAdapter = require('testcafe').embeddingUtils.TestRunErrorFormattableAdapter;
-var UncaughtErrorOnPage            = require('testcafe').embeddingUtils.testRunErrors.UncaughtErrorOnPage;
-var ActionElementNotFoundError     = require('testcafe').embeddingUtils.testRunErrors.ActionElementNotFoundError;
-var testCallsite                   = require('./test-callsite');
+const TestRunErrorFormattableAdapter = require('testcafe').embeddingUtils.TestRunErrorFormattableAdapter;
+const UncaughtErrorOnPage            = require('testcafe').embeddingUtils.testRunErrors.UncaughtErrorOnPage;
+const ActionElementNotFoundError     = require('testcafe').embeddingUtils.testRunErrors.ActionElementNotFoundError;
+const testCallsite                   = require('./test-callsite');
 
 
 function makeErrors (errDescrs) {
@@ -55,7 +55,7 @@ module.exports = [
                             userAgent:      'Chrome 41.0.2227 / Mac OS X 10.10.1',
                             screenshotPath: '/screenshots/1445437598847/errors',
                             callsite:       testCallsite,
-                            testRunState:   'inTest'
+                            testRunPhase:   'inTest'
                         }
                     },
                     {
@@ -64,7 +64,7 @@ module.exports = [
                         metaInfo: {
                             userAgent:    'Firefox 47 / Mac OS X 10.10.1',
                             callsite:     testCallsite,
-                            testRunState: 'inTest'
+                            testRunPhase: 'inTest'
                         }
                     }
                 ]),
@@ -150,7 +150,7 @@ module.exports = [
                         metaInfo: {
                             userAgent:    'Firefox 47 / Mac OS X 10.10.1',
                             callsite:     testCallsite,
-                            testRunState: 'inBeforeEach'
+                            testRunPhase: 'inFixtureBeforeEachHook'
                         }
                     }
                 ]),
