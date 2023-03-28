@@ -1,9 +1,9 @@
-var buildReporterPlugin = require('testcafe').embeddingUtils.buildReporterPlugin;
-var pluginFactory       = require('../../lib');
-var reporterTestCalls   = require('./reporter-test-calls');
+const buildReporterPlugin = require('testcafe').embeddingUtils.buildReporterPlugin;
+const pluginFactory       = require('../../lib');
+const reporterTestCalls   = require('./reporter-test-calls');
 
 module.exports = function createReport (withColors) {
-    var outStream = {
+    const outStream = {
         data: '',
 
         write: function (text) {
@@ -11,7 +11,7 @@ module.exports = function createReport (withColors) {
         }
     };
 
-    var plugin = buildReporterPlugin(pluginFactory, outStream);
+    const plugin = buildReporterPlugin(pluginFactory, outStream);
 
     plugin.chalk.enabled = !plugin.noColors && withColors;
     plugin.symbols       = { ok: '✓', err: '✖' };
@@ -19,12 +19,12 @@ module.exports = function createReport (withColors) {
     // NOTE: disable errors coloring if we don't have custom
     // error decorator. Default error colors may be prone to changing.
     if (plugin.chalk.enabled && !pluginFactory().createErrorDecorator) {
-        var origFormatError = plugin.formatError;
+        const origFormatError = plugin.formatError;
 
         plugin.formatError = function () {
             plugin.chalk.enabled = false;
 
-            var result = origFormatError.apply(plugin, arguments);
+            const result = origFormatError.apply(plugin, arguments);
 
             plugin.chalk.enabled = true;
 

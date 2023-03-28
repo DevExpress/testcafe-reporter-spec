@@ -10,11 +10,7 @@ export default function () {
             this.startTime = startTime;
             this.testCount = testCount;
 
-            const writeData = {
-                startTime,
-                userAgents,
-                testCount,
-            };
+            const writeData = { startTime, userAgents, testCount };
 
             this.setIndent(1)
                 .useWordWrap(true)
@@ -88,11 +84,7 @@ export default function () {
             if (testRunInfo.screenshotPath)
                 title += ` (screenshots: ${this.chalk.underline.grey(testRunInfo.screenshotPath)})`;
 
-            const writeData = {
-                name,
-                testRunInfo,
-                meta,
-            };
+            const writeData = { name, testRunInfo, meta };
 
             this.write(title, writeData);
 
@@ -171,11 +163,7 @@ export default function () {
             this.setIndent(1)
                 .useWordWrap(true);
 
-            const writeData = {
-                endTime,
-                passed,
-                warnings,
-            };
+            const writeData = { endTime, passed, warnings };
 
             this.newline()
                 .write(footer, writeData)

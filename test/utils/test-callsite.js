@@ -1,4 +1,4 @@
-var createCallsiteRecord = require('callsite-record');
+const createCallsiteRecord = require('callsite-record');
 
 function someFunc () {
     throw new Error('Hey ya!');
