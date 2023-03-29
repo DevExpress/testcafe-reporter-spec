@@ -3,18 +3,22 @@
  - Firefox 47 / Mac OS X 10.10.1
 
  First fixture
- ✓ First test in first fixture (unstable) (screenshots:
- /screenshots/1445437598847)
+ ✓ First test in first fixture (unstable) (screenshots: /screenshots/1445437598847)
  ✖ Second test in first fixture (screenshots: /screenshots/1445437598847)
 
-   1) Error on page "http://example.org":
+   1) A JavaScript error occurred on "http://example.org".
+      Repeat test actions in the browser and check the console for errors.
+      Enable the “skipJsErrors” option to ignore JavaScript errors during test execution. Learn more: "https://testcafe.io/documentation/404038/recipes/debugging/skip-javascript-errors"
+      If the website only throws this error when you test it with TestCafe, please create a new issue at:
+      "https://github.com/DevExpress/testcafe/issues/new?template=bug-report.md".
 
+      JavaScript error details:
       Some error
 
       Browser: Chrome 41.0.2227 / Mac OS X 10.10.1
       Screenshot: /screenshots/1445437598847/errors
 
-         1 |var createCallsiteRecord = require('callsite-record');
+         1 |const createCallsiteRecord = require('callsite-record');
          2 |
          3 |function someFunc () {
        > 4 |    throw new Error('Hey ya!');
@@ -25,6 +29,8 @@
          9 |}
 
          at someFunc (some-file:1:1)
+         at Object.<anonymous> (some-file:1:1)
+         at Object.<anonymous> (some-file:1:1)
          at Object.<anonymous> (some-file:1:1)
          at Object.<anonymous> (some-file:1:1)
 
@@ -33,7 +39,7 @@
 
       Browser: Firefox 47 / Mac OS X 10.10.1
 
-         1 |var createCallsiteRecord = require('callsite-record');
+         1 |const createCallsiteRecord = require('callsite-record');
          2 |
          3 |function someFunc () {
        > 4 |    throw new Error('Hey ya!');
@@ -44,6 +50,8 @@
          9 |}
 
          at someFunc (some-file:1:1)
+         at Object.<anonymous> (some-file:1:1)
+         at Object.<anonymous> (some-file:1:1)
          at Object.<anonymous> (some-file:1:1)
          at Object.<anonymous> (some-file:1:1)
 
@@ -58,12 +66,12 @@
  Third fixture
  ✖ First test in third fixture (unstable)
 
-   1) - Error in beforeEach hook -
+   1) - Error in fixture.beforeEach hook -
       The specified selector does not match any element in the DOM tree.
 
       Browser: Firefox 47 / Mac OS X 10.10.1
 
-         1 |var createCallsiteRecord = require('callsite-record');
+         1 |const createCallsiteRecord = require('callsite-record');
          2 |
          3 |function someFunc () {
        > 4 |    throw new Error('Hey ya!');
@@ -74,6 +82,8 @@
          9 |}
 
          at someFunc (some-file:1:1)
+         at Object.<anonymous> (some-file:1:1)
+         at Object.<anonymous> (some-file:1:1)
          at Object.<anonymous> (some-file:1:1)
          at Object.<anonymous> (some-file:1:1)
 
@@ -92,7 +102,4 @@
 
   ReferenceError: someOtherVar is not defined
  --
-  Was unable to take screenshots because the screenshot directory is not
-  specified. To specify it, use the "-s" or "--screenshots" command line
-  option or the "screenshots" method of the test runner in case you are using
-  API.
+  Was unable to take screenshots because the screenshot directory is not specified. To specify it, use the "-s" or "--screenshots" command line option or the "screenshots" method of the test runner in case you are using API.
