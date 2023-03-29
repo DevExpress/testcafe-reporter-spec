@@ -148,7 +148,7 @@ export default function () {
             });
         },
 
-        reportTaskDone (endTime, passed, warnings) {
+        reportTaskDone (endTime, passed, warnings, result) {
             const durationMs  = endTime - this.startTime;
             const durationStr = this.moment.duration(durationMs).format('h[h] mm[m] ss[s]');
             let footer        = passed === this.testCount ?
@@ -163,7 +163,7 @@ export default function () {
             this.setIndent(1)
                 .useWordWrap(true);
 
-            const writeData = { endTime, passed, warnings };
+            const writeData = { endTime, passed, warnings, result };
 
             this.newline()
                 .write(footer, writeData)
