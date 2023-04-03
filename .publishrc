@@ -8,6 +8,6 @@
     "gitTag": true
   },
   "confirm": false,
-  "publishTag": "latest",
+  "publishTag": "rc",
   "prePublishScript": "npm run test"
 }
