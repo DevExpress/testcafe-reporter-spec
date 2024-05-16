@@ -1,11 +1,10 @@
 const assert           = require('assert');
 const normalizeNewline = require('normalize-newline');
 const read             = require('read-file-relative').readSync;
-const OS               = require('os-family');
 const createReport     = require('./utils/create-report');
 
 it('Should produce report with colors', function () {
-    const expectedFile = OS.win ? './data/report-with-colors-win.json' : './data/report-with-colors.json';
+    const expectedFile = './data/report-with-colors.json';
     let report       = createReport(true);
     let expected     = JSON.parse(read(expectedFile));
 
