@@ -1,7 +1,6 @@
 const gulp   = require('gulp');
 const eslint = require('gulp-eslint');
 const babel  = require('gulp-babel');
-const mocha  = require('gulp-mocha');
 const del    = require('del');
 
 gulp.task('clean', function (cb) {
@@ -30,7 +29,9 @@ gulp.task('compile', function () {
         .pipe(gulp.dest('lib'));
 });
 
-gulp.task('test-run', function () {
+gulp.task('test-run', async function () {
+    const mocha = (await import('gulp-mocha')).default;
+
     return gulp
         .src('test/**.js')
         .pipe(mocha({
